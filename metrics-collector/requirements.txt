@@ -1,0 +1,3 @@
+﻿requests==2.31.0
+psutil==5.9.5
+redis==4.5.5

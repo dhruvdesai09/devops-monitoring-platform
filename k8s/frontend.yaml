@@ -1,0 +1,36 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: monitoring-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: YOUR_DOCKERHUB_USERNAME/monitoring-frontend:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: REACT_APP_BACKEND_URL
+          value: http://backend:5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: monitoring-app
+spec:
+  selector:
+    app: frontend
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
