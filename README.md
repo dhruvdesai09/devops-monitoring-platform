@@ -32,14 +32,14 @@ Full-stack monitoring application with microservices architecture deployed on AW
 ## Project Structure
 ```
 devops-monitoring-platform/
-â”œâ”€â”€ backend/                 # Node.js API service
-â”œâ”€â”€ frontend/               # React dashboard
-â”œâ”€â”€ metrics-collector/      # Python metrics collector
-â”œâ”€â”€ k8s/                    # Kubernetes manifests
-â”œâ”€â”€ terraform/              # Infrastructure as Code
-â”œâ”€â”€ docker-compose.yml      # Local development
-â”œâ”€â”€ Jenkinsfile            # CI/CD pipeline
-â””â”€â”€ README.md
+ backend/                 # Node.js API service
+ frontend/               # React dashboard
+ metrics-collector/      # Python metrics collector
+ k8s/                    # Kubernetes manifests
+ terraform/              # Infrastructure as Code
+ docker-compose.yml      # Local development
+ Jenkinsfile            # CI/CD pipeline
+ README.md
 ```
 
 ## Quick Start (Local Development)
@@ -82,6 +82,3 @@ See **DEPLOYMENT.md** for complete step-by-step deployment guide.
 3. Commit your changes
 4. Push to the branch
 5. Create a Pull Request
-
-## License
-MIT License
